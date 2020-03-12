@@ -1,11 +1,3 @@
----
-title: 网络建设自动化（硬件+配置批量生成）
-date: 2020-03-12 15:38:33
-tags: [network-hardware,network-automation,network-architecture,network-config]
-keywords: [network-hardware,network-automation,network-architecture,network-config]
-categories: Network-Automation
-comments: true
----
 
 ## 系统背景
 任何一个网络团队在规划完网络架构后都需要针对这套架构去生成对应的硬件（采购清单、连线关系、安装方案）+配置（所有设备的配置文件）方案。大公司往往都有一套非常完善的自动化建设系统，但其实想通过自动化脚本去实现这个过程一点不复杂，也不需要建立什么硬件、配置的模型，这里就展示一个通过excel规划网络方案，自动化生成网络方案的小系统。<br/>
