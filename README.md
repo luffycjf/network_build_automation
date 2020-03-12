@@ -278,9 +278,10 @@ save force
 ![address](http://119.28.225.12:81/na8.png)
 
 ![address](http://119.28.225.12:81/na9.png)
+<br/>
 
 
-##总结
+## 总结
 
 系统目录下执行python build.py，输入架构版本和项目名称，及可运行。测试用例版本叫v1，项目名称叫st。<br/>
 
