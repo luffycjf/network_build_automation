@@ -77,7 +77,7 @@ def get_address(role_name,device_id,port,index=0):
     address_mask_dict = gol.get_value('address_mask_dict')
     #global address_mask_dict
     try:
-        address = address_mask_dict.get(str(role_name)+str(device_id)+port)[index].split('/')[0]
+        address = address_mask_dict.get(str(role_name)+'-'+str(device_id)+port)[index].split('/')[0]
     except:
         address = ''
     return address
@@ -87,7 +87,7 @@ def get_mask(role_name,device_id,port,index=0,type=0):
     address_mask_dict = gol.get_value('address_mask_dict')
     #global address_mask_dict
     try:
-        mask = address_mask_dict.get(str(role_name)+str(device_id)+port)[index].split('/')[1]
+        mask = address_mask_dict.get(str(role_name)+'-'+str(device_id)+port)[index].split('/')[1]
         b = (int(mask) * "1") + ((32 - int(mask)) * "0")
         b = [int(x, 2) for x in (b[:8],b[8:16],b[16:24],b[24:])]
         maskb = "%s.%s.%s.%s" % tuple(b)
@@ -102,7 +102,7 @@ def get_gateway(role_name,device_id,port,index=0):
     address_mask_dict = gol.get_value('address_mask_dict')
     #global address_mask_dict
     try:
-        address_mask = address_mask_dict.get(str(role_name)+str(device_id)+port)[index]
+        address_mask = address_mask_dict.get(str(role_name)+'-'+str(device_id)+port)[index]
         net = ipaddress.ip_network(address_mask, strict=False)
         gateway = str([x for x in net.hosts()][0])
     except:
